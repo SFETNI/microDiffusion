@@ -42,6 +42,17 @@ Open:
 
 ```text
 microdiffusion_explorer.ipynb
+
+## Notes on Notebooks and Repo Size
+
+The repository may include executed Jupyter notebooks. Notebook outputs (embedded images/base64) can significantly increase repository size and make cloning slower for contributors.
+
+Recommendations:
+
+- Do not commit large notebook outputs. Use `nbstripout` or the provided `pre-commit` hook to automatically strip outputs before committing.
+- If you're preparing a release archive and want to exclude notebooks, `.gitattributes` contains an `export-ignore` entry for `*.ipynb`.
+
+See `CONTRIBUTING.md` for setup instructions.
 ```
 
 The notebook shows the embedded glyph dataset, the forward noising process, the training curve, reverse denoising frames, and a gallery of generated samples.
